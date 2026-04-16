@@ -354,6 +354,7 @@ namespace StudentManagementSystem
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
         private void ApplyGradient(object sender, PaintEventArgs e)
         {
             TabPage page = (TabPage)sender;
