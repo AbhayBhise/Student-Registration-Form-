@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -352,6 +353,16 @@ namespace StudentManagementSystem
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+            }
+        private void ApplyGradient(object sender, PaintEventArgs e)
+        {
+            TabPage page = (TabPage)sender;
+            using (LinearGradientBrush brush = new LinearGradientBrush(page.ClientRectangle, 
+                Color.FromArgb(230, 240, 255), // Very light formal blue
+                Color.White, 
+                LinearGradientMode.Vertical))
+            {
+                e.Graphics.FillRectangle(brush, page.ClientRectangle);
             }
         }
     }

@@ -125,34 +125,41 @@ namespace StudentManagementSystem
             this.tabStudent.BackColor = System.Drawing.Color.White;
             this.tabStudent.Name = "tabStudent";
             this.tabStudent.Text = "Student Registration";
+            this.tabStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.ApplyGradient);
 
             // tabAccount
             this.tabAccount.BackColor = System.Drawing.Color.White;
             this.tabAccount.Name = "tabAccount";
             this.tabAccount.Text = "Accounts & Fees";
+            this.tabAccount.Paint += new System.Windows.Forms.PaintEventHandler(this.ApplyGradient);
 
             // tabLibrary
             this.tabLibrary.BackColor = System.Drawing.Color.White;
             this.tabLibrary.Name = "tabLibrary";
             this.tabLibrary.Text = "Library System";
+            this.tabLibrary.Paint += new System.Windows.Forms.PaintEventHandler(this.ApplyGradient);
 
             // tabExam
             this.tabExam.BackColor = System.Drawing.Color.White;
             this.tabExam.Name = "tabExam";
             this.tabExam.Text = "Examination";
+            this.tabExam.Paint += new System.Windows.Forms.PaintEventHandler(this.ApplyGradient);
 
             // tabPlacement
             this.tabPlacement.BackColor = System.Drawing.Color.White;
             this.tabPlacement.Name = "tabPlacement";
             this.tabPlacement.Text = "Placement Cell";
+            this.tabPlacement.Paint += new System.Windows.Forms.PaintEventHandler(this.ApplyGradient);
 
             // ===== STUDENT TAB =====
+            this.lblStudentTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblStudentTitle.AutoSize = true;
             this.lblStudentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblStudentTitle.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblStudentTitle.Location = new System.Drawing.Point(20, 15);
             this.lblStudentTitle.Text = "Student Registration";
 
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(20, 65);
             this.lblName.Text = "Full Name:";
@@ -161,6 +168,7 @@ namespace StudentManagementSystem
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(220, 22);
 
+            this.lblDOB.BackColor = System.Drawing.Color.Transparent;
             this.lblDOB.AutoSize = true;
             this.lblDOB.Location = new System.Drawing.Point(20, 102);
             this.lblDOB.Text = "Date of Birth:";
@@ -170,6 +178,7 @@ namespace StudentManagementSystem
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(220, 22);
 
+            this.lblGender.BackColor = System.Drawing.Color.Transparent;
             this.lblGender.AutoSize = true;
             this.lblGender.Location = new System.Drawing.Point(20, 139);
             this.lblGender.Text = "Gender:";
@@ -180,6 +189,7 @@ namespace StudentManagementSystem
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(220, 24);
 
+            this.lblAddress.BackColor = System.Drawing.Color.Transparent;
             this.lblAddress.AutoSize = true;
             this.lblAddress.Location = new System.Drawing.Point(20, 176);
             this.lblAddress.Text = "Address:";
@@ -189,6 +199,7 @@ namespace StudentManagementSystem
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(220, 55);
 
+            this.lblContact.BackColor = System.Drawing.Color.Transparent;
             this.lblContact.AutoSize = true;
             this.lblContact.Location = new System.Drawing.Point(20, 246);
             this.lblContact.Text = "Contact No:";
@@ -197,6 +208,7 @@ namespace StudentManagementSystem
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(220, 22);
 
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Location = new System.Drawing.Point(20, 283);
             this.lblEmail.Text = "Email:";
@@ -205,6 +217,7 @@ namespace StudentManagementSystem
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(220, 22);
 
+            this.lblCourse.BackColor = System.Drawing.Color.Transparent;
             this.lblCourse.AutoSize = true;
             this.lblCourse.Location = new System.Drawing.Point(20, 320);
             this.lblCourse.Text = "Course/Branch:";
@@ -215,6 +228,7 @@ namespace StudentManagementSystem
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(220, 24);
 
+            this.lblAdmDate.BackColor = System.Drawing.Color.Transparent;
             this.lblAdmDate.AutoSize = true;
             this.lblAdmDate.Location = new System.Drawing.Point(20, 357);
             this.lblAdmDate.Text = "Admission Date:";
@@ -224,6 +238,7 @@ namespace StudentManagementSystem
             this.dtpAdmission.Name = "dtpAdmission";
             this.dtpAdmission.Size = new System.Drawing.Size(220, 22);
 
+            this.lblPhoto.BackColor = System.Drawing.Color.Transparent;
             this.lblPhoto.AutoSize = true;
             this.lblPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.lblPhoto.Location = new System.Drawing.Point(450, 55);
@@ -286,12 +301,14 @@ namespace StudentManagementSystem
             this.tabStudent.Controls.Add(this.btnClearStudent);
 
             // ===== ACCOUNT TAB =====
+            this.lblAccountTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblAccountTitle.AutoSize = true;
             this.lblAccountTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblAccountTitle.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblAccountTitle.Location = new System.Drawing.Point(20, 15);
             this.lblAccountTitle.Text = "Student Account Details";
 
+            this.lblStudentSelAcc.BackColor = System.Drawing.Color.Transparent;
             this.lblStudentSelAcc.AutoSize = true;
             this.lblStudentSelAcc.Location = new System.Drawing.Point(20, 65);
             this.lblStudentSelAcc.Text = "Select Student:";
@@ -310,6 +327,7 @@ namespace StudentManagementSystem
             this.btnLoadAccount.Text = "Load";
             this.btnLoadAccount.Click += new System.EventHandler(this.btnLoadAccount_Click);
 
+            this.lblTotalFees.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalFees.AutoSize = true;
             this.lblTotalFees.Location = new System.Drawing.Point(20, 110);
             this.lblTotalFees.Text = "Total Fees (Rs):";
@@ -318,6 +336,7 @@ namespace StudentManagementSystem
             this.txtTotalFees.Name = "txtTotalFees";
             this.txtTotalFees.Size = new System.Drawing.Size(200, 22);
 
+            this.lblFeesPaid.BackColor = System.Drawing.Color.Transparent;
             this.lblFeesPaid.AutoSize = true;
             this.lblFeesPaid.Location = new System.Drawing.Point(20, 148);
             this.lblFeesPaid.Text = "Fees Paid (Rs):";
@@ -326,6 +345,7 @@ namespace StudentManagementSystem
             this.txtFeesPaid.Name = "txtFeesPaid";
             this.txtFeesPaid.Size = new System.Drawing.Size(200, 22);
 
+            this.lblPending.BackColor = System.Drawing.Color.Transparent;
             this.lblPending.AutoSize = true;
             this.lblPending.ForeColor = System.Drawing.Color.Red;
             this.lblPending.Location = new System.Drawing.Point(20, 186);
@@ -337,6 +357,7 @@ namespace StudentManagementSystem
             this.txtPendingFees.ReadOnly = true;
             this.txtPendingFees.Size = new System.Drawing.Size(200, 22);
 
+            this.lblScholarship.BackColor = System.Drawing.Color.Transparent;
             this.lblScholarship.AutoSize = true;
             this.lblScholarship.Location = new System.Drawing.Point(20, 224);
             this.lblScholarship.Text = "Scholarship (Rs):";
@@ -345,6 +366,7 @@ namespace StudentManagementSystem
             this.txtScholarship.Name = "txtScholarship";
             this.txtScholarship.Size = new System.Drawing.Size(200, 22);
 
+            this.lblFine.BackColor = System.Drawing.Color.Transparent;
             this.lblFine.AutoSize = true;
             this.lblFine.Location = new System.Drawing.Point(20, 262);
             this.lblFine.Text = "Fine Imposed (Rs):";
@@ -379,12 +401,14 @@ namespace StudentManagementSystem
             this.tabAccount.Controls.Add(this.btnUpdateAccount);
 
             // ===== LIBRARY TAB =====
+            this.lblLibraryTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblLibraryTitle.AutoSize = true;
             this.lblLibraryTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblLibraryTitle.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblLibraryTitle.Location = new System.Drawing.Point(20, 15);
             this.lblLibraryTitle.Text = "Library Management";
 
+            this.lblStudentSelLib.BackColor = System.Drawing.Color.Transparent;
             this.lblStudentSelLib.AutoSize = true;
             this.lblStudentSelLib.Location = new System.Drawing.Point(20, 65);
             this.lblStudentSelLib.Text = "Select Student:";
@@ -394,6 +418,7 @@ namespace StudentManagementSystem
             this.cmbStudentIdLib.Name = "cmbStudentIdLib";
             this.cmbStudentIdLib.Size = new System.Drawing.Size(250, 24);
 
+            this.lblBookName.BackColor = System.Drawing.Color.Transparent;
             this.lblBookName.AutoSize = true;
             this.lblBookName.Location = new System.Drawing.Point(20, 105);
             this.lblBookName.Text = "Book Name:";
@@ -402,6 +427,7 @@ namespace StudentManagementSystem
             this.txtBookName.Name = "txtBookName";
             this.txtBookName.Size = new System.Drawing.Size(250, 22);
 
+            this.lblIssueDate.BackColor = System.Drawing.Color.Transparent;
             this.lblIssueDate.AutoSize = true;
             this.lblIssueDate.Location = new System.Drawing.Point(20, 143);
             this.lblIssueDate.Text = "Issue Date:";
@@ -411,6 +437,7 @@ namespace StudentManagementSystem
             this.dtpIssueDate.Name = "dtpIssueDate";
             this.dtpIssueDate.Size = new System.Drawing.Size(200, 22);
 
+            this.lblReturnDate.BackColor = System.Drawing.Color.Transparent;
             this.lblReturnDate.AutoSize = true;
             this.lblReturnDate.Location = new System.Drawing.Point(20, 181);
             this.lblReturnDate.Text = "Return Date:";
@@ -464,12 +491,14 @@ namespace StudentManagementSystem
             this.tabLibrary.Controls.Add(this.dgvLibrary);
 
             // ===== EXAM TAB =====
+            this.lblExamTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblExamTitle.AutoSize = true;
             this.lblExamTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblExamTitle.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblExamTitle.Location = new System.Drawing.Point(20, 15);
             this.lblExamTitle.Text = "Exam Cell - Academic Results";
 
+            this.lblStudentSelExam.BackColor = System.Drawing.Color.Transparent;
             this.lblStudentSelExam.AutoSize = true;
             this.lblStudentSelExam.Location = new System.Drawing.Point(20, 65);
             this.lblStudentSelExam.Text = "Select Student:";
@@ -479,6 +508,7 @@ namespace StudentManagementSystem
             this.cmbStudentIdExam.Name = "cmbStudentIdExam";
             this.cmbStudentIdExam.Size = new System.Drawing.Size(250, 24);
 
+            this.lblSemester.BackColor = System.Drawing.Color.Transparent;
             this.lblSemester.AutoSize = true;
             this.lblSemester.Location = new System.Drawing.Point(20, 105);
             this.lblSemester.Text = "Semester:";
@@ -489,6 +519,7 @@ namespace StudentManagementSystem
             this.cmbSemester.Name = "cmbSemester";
             this.cmbSemester.Size = new System.Drawing.Size(200, 24);
 
+            this.lblSubject.BackColor = System.Drawing.Color.Transparent;
             this.lblSubject.AutoSize = true;
             this.lblSubject.Location = new System.Drawing.Point(20, 145);
             this.lblSubject.Text = "Subject:";
@@ -497,6 +528,7 @@ namespace StudentManagementSystem
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(220, 22);
 
+            this.lblMarks.BackColor = System.Drawing.Color.Transparent;
             this.lblMarks.AutoSize = true;
             this.lblMarks.Location = new System.Drawing.Point(20, 183);
             this.lblMarks.Text = "Marks:";
@@ -505,6 +537,7 @@ namespace StudentManagementSystem
             this.txtMarks.Name = "txtMarks";
             this.txtMarks.Size = new System.Drawing.Size(100, 22);
 
+            this.lblGradeLabel.BackColor = System.Drawing.Color.Transparent;
             this.lblGradeLabel.AutoSize = true;
             this.lblGradeLabel.Location = new System.Drawing.Point(285, 183);
             this.lblGradeLabel.Text = "Grade:";
@@ -513,6 +546,7 @@ namespace StudentManagementSystem
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.Size = new System.Drawing.Size(80, 22);
 
+            this.lblSGPA.BackColor = System.Drawing.Color.Transparent;
             this.lblSGPA.AutoSize = true;
             this.lblSGPA.Location = new System.Drawing.Point(20, 221);
             this.lblSGPA.Text = "SGPA:";
@@ -521,6 +555,7 @@ namespace StudentManagementSystem
             this.txtSGPA.Name = "txtSGPA";
             this.txtSGPA.Size = new System.Drawing.Size(100, 22);
 
+            this.lblCGPA.BackColor = System.Drawing.Color.Transparent;
             this.lblCGPA.AutoSize = true;
             this.lblCGPA.Location = new System.Drawing.Point(285, 221);
             this.lblCGPA.Text = "CGPA:";
@@ -579,12 +614,14 @@ namespace StudentManagementSystem
             this.tabExam.Controls.Add(this.dgvExam);
 
             // ===== PLACEMENT TAB =====
+            this.lblPlacementTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblPlacementTitle.AutoSize = true;
             this.lblPlacementTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblPlacementTitle.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblPlacementTitle.Location = new System.Drawing.Point(20, 15);
             this.lblPlacementTitle.Text = "Placement Cell";
 
+            this.lblStudentSelPlace.BackColor = System.Drawing.Color.Transparent;
             this.lblStudentSelPlace.AutoSize = true;
             this.lblStudentSelPlace.Location = new System.Drawing.Point(20, 65);
             this.lblStudentSelPlace.Text = "Select Student:";
@@ -594,6 +631,7 @@ namespace StudentManagementSystem
             this.cmbStudentIdPlace.Name = "cmbStudentIdPlace";
             this.cmbStudentIdPlace.Size = new System.Drawing.Size(250, 24);
 
+            this.lblResume.BackColor = System.Drawing.Color.Transparent;
             this.lblResume.AutoSize = true;
             this.lblResume.Location = new System.Drawing.Point(20, 110);
             this.lblResume.Text = "Upload Resume (PDF):";
@@ -607,6 +645,7 @@ namespace StudentManagementSystem
             this.btnUploadResume.Text = "Browse PDF";
             this.btnUploadResume.Click += new System.EventHandler(this.btnUploadResume_Click);
 
+            this.lblResumeName.BackColor = System.Drawing.Color.Transparent;
             this.lblResumeName.AutoSize = false;
             this.lblResumeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic);
             this.lblResumeName.ForeColor = System.Drawing.Color.DarkGreen;
@@ -615,6 +654,7 @@ namespace StudentManagementSystem
             this.lblResumeName.Size = new System.Drawing.Size(380, 22);
             this.lblResumeName.Text = "No file selected";
 
+            this.lblPlacementType.BackColor = System.Drawing.Color.Transparent;
             this.lblPlacementType.AutoSize = true;
             this.lblPlacementType.Location = new System.Drawing.Point(20, 183);
             this.lblPlacementType.Text = "Placement Type:";
@@ -625,6 +665,7 @@ namespace StudentManagementSystem
             this.cmbPlacementType.Name = "cmbPlacementType";
             this.cmbPlacementType.Size = new System.Drawing.Size(200, 24);
 
+            this.lblDomain.BackColor = System.Drawing.Color.Transparent;
             this.lblDomain.AutoSize = true;
             this.lblDomain.Location = new System.Drawing.Point(20, 221);
             this.lblDomain.Text = "Interested Domain:";
